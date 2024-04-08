@@ -22,6 +22,9 @@ class Bettor
     #[ORM\Column]
     private ?int $age = null;
 
+    #[ORM\Column]
+    private array $wager = [];
+
     public function getId(): ?int
     {
         return $this->id;
@@ -50,4 +53,17 @@ class Bettor
 
         return $this;
     }
+
+    public function getWager(): array
+    {
+        return $this->wager;
+    }
+
+    public function setWager(array $wager): static
+    {
+        $this->wager = $wager;
+
+        return $this;
+    }
+
 }
