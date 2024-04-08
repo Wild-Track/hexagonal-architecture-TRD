@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  database:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: trd
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: symfony
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: database
+      PMA_USER: root
+      PMA_PASSWORD: root
+    ports:
+      - "8085:80"
+    depends_on:
+      - database
+
+  mailtrap:
+    image: dbck/mailtrap
+    restart: always
+    ports:
+      - "8025:80"
+      - "2525:25"
+      - "2465:465"
+
+volumes:
+  db_data: {}
