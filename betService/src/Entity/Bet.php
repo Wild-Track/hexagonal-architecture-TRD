@@ -19,7 +19,7 @@ class Bet
     private ?int $id = null;
 
     /**
-     * @var Collection<int, book>
+     * @var Collection<int, Book>
      */
     #[ORM\ManyToMany(targetEntity: book::class, inversedBy: 'bets')]
     private Collection $books;
