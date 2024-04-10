@@ -1,0 +1,1 @@
+/home/sesamm/Desktop/rust/gangsta2/target/debug/gangsta2: /home/sesamm/Desktop/rust/gangsta2/src/command.rs /home/sesamm/Desktop/rust/gangsta2/src/hello_command.rs /home/sesamm/Desktop/rust/gangsta2/src/main.rs /home/sesamm/Desktop/rust/gangsta2/src/robot.rs
