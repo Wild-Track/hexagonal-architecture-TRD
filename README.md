@@ -9,5 +9,4 @@ The following folder contains:
 
 ## By
 
-GERARD Alexandre
-POIRÉ Nicolas
+GERARD Alexandre - POIRÉ Nicolas
